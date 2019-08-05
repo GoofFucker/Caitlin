@@ -18,8 +18,7 @@ client.on('message', message => {
         let text = message.content.slice('>Pub'.length); // cuts off the /private part
         message.delete();
         if(message.channel.id == "608036987571535893") {
-        let RoleNeed = message.guild.roles.find("name", "Access-Granted");
-        if(message.member.roles.has(RoleNeed) {
+        if(message.member.roles.find("name", "Access-Granted")) {
             const publ = new Discord.RichEmbed()
                     .setColor(0xCF40FA)
                     .setAuthor(`${message.author.tag}`, `${message.author.avatarURL} `)    

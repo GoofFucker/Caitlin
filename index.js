@@ -17,7 +17,9 @@ client.on('message', message => {
     if (message.content.startsWith('>Pub')) {
         let text = message.content.slice('>Pub'.length); // cuts off the /private part
         message.delete();
-        const publ = new Discord.RichEmbed()
+        let RoleNeed = message.guild.roles.find("name", "Access-Granted");
+        if(message.member.roles.has(RoleNeed) {
+            const publ = new Discord.RichEmbed()
                     .setColor(0xCF40FA)
                     .setAuthor(`${message.author.tag}`, `${message.author.avatarURL} `)    
                     .addField(`✅ Votre message à bien été envoyé !`, `Toujours prêt à servir.`)
@@ -87,3 +89,7 @@ client.on('message', message => {
                 client.users.get("471064215453564938").send(text)
                 client.users.get("551947575885037592").send(text)
                 client.users.get("453275450530070528").send(text)
+} else {
+
+
+}});

@@ -5,7 +5,7 @@ client.login(process.env.CAITLIN);
 
 client.on("ready", () => {
     console.log("Ready");
-    client.user.setActivity(`Hey - By MisdirectionOV#6496`, { type: "STREAMING", url: "https://www.twitch.tv/balancetonquoi19" })
+    client.user.setActivity(`Le meilleur bot pour Pub !`, { type: "STREAMING", url: "https://www.twitch.tv/balancetonquoi19" })
 });
 
 //----------------------------//

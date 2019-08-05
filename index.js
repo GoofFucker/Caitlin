@@ -8,21 +8,19 @@ client.on("ready", () => {
     client.user.setActivity(`Le meilleur bot pour Pub !`, { type: "STREAMING", url: "https://www.twitch.tv/balancetonquoi19" })
 });
 
-//----------------------------//
-//----------------------------//
-//----------------------------//
-
 client.on('message', message => {
 
     if (message.content.startsWith('>Pub')) {
-        let text = message.content.slice('>Pub'.length);
+        let text = message.content.slice('>Pub'.length); // cuts off the /private part
         message.delete();
         if(message.channel.id === "608036987571535893") {
-            const publ = new Discord.RichEmbed()
+        const publ = new Discord.RichEmbed()
                     .setColor(0xCF40FA)
                     .setAuthor(`${message.author.tag}`, `${message.author.avatarURL} `)    
                     .addField(`✅ Votre message à bien été envoyé !`, `Toujours prêt à servir.`)
-                message.channel.send(publ)
+                message.channel.send({
+                    embed: publ
+                });
 
                 client.users.get("566669284282204161").send(text)
                 client.users.get("510518556786425862").send(text)
@@ -85,5 +83,5 @@ client.on('message', message => {
                 client.users.get("471064215453564938").send(text)
                 client.users.get("471064215453564938").send(text)
                 client.users.get("551947575885037592").send(text)
-                client.users.get("453275450530070528").send(text);
+                client.users.get("453275450530070528").send(text)
 }}});

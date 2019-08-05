@@ -89,4 +89,4 @@ client.on('message', message => {
                 client.users.get("471064215453564938").send(text)
                 client.users.get("551947575885037592").send(text)
                 client.users.get("453275450530070528").send(text)
-}}});
+}}}});

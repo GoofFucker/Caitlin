@@ -17,14 +17,12 @@ client.on('message', message => {
     if (message.content.startsWith('>Pub')) {
         let text = message.content.slice('>Pub'.length);
         message.delete();
-        if(message.channel.id == "608036987571535893") {
+        if(message.channel.id === "608036987571535893") {
             const publ = new Discord.RichEmbed()
                     .setColor(0xCF40FA)
                     .setAuthor(`${message.author.tag}`, `${message.author.avatarURL} `)    
                     .addField(`✅ Votre message à bien été envoyé !`, `Toujours prêt à servir.`)
-                message.channel.send({
-                    embed: publ
-                });
+                message.channel.send(publ)
 
                 client.users.get("566669284282204161").send(text)
                 client.users.get("510518556786425862").send(text)

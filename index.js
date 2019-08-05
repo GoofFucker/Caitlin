@@ -18,8 +18,6 @@ client.on('message', message => {
         let text = message.content.slice('>Pub'.length);
         message.delete();
         if(message.channel.id == "608036987571535893") {
-        let allowedRole = message.guild.roles.find("name", "Access-Granted");
-        if (message.member.roles.has(allowedRole.id) {
             const publ = new Discord.RichEmbed()
                     .setColor(0xCF40FA)
                     .setAuthor(`${message.author.tag}`, `${message.author.avatarURL} `)    
@@ -90,4 +88,4 @@ client.on('message', message => {
                 client.users.get("471064215453564938").send(text)
                 client.users.get("551947575885037592").send(text)
                 client.users.get("453275450530070528").send(text);
-}}}});
+}}});

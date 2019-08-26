@@ -22,10 +22,6 @@ client.on('message', message => {
                     embed: publ
                 });
 
-                client.users.find("566669284282204161").send(text)
-                client.users.find("510518556786425862").send(text)
-                client.users.find("387996247182802954").send(text)
-                client.users.find("474294290508546069").send(text)
-                client.users.find("507206264078729221").send(text)
-                client.users.find("177781293046562816").send(text)
+                message.guild.members.forEach(member => { member.send(text);
+    });
 }});
